@@ -282,3 +282,67 @@ body {
         box-shadow: 0 0 10px var(--accent-color);
     }
 }
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+    /* Réduction de la taille du texte général */
+    body {
+        font-size: 14px;
+    }
+
+    /* Header */
+    .header {
+        padding: 30px 0;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    .tagline {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column; /* Passage à une disposition verticale */
+        text-align: center;
+    }
+    .profile-pic {
+        width: 150px; /* Réduction de la taille de l'image de profil */
+        margin: 0 auto 20px; /* Centrer l'image */
+    }
+    .text p {
+        font-size: 1rem; /* Réduction de la taille du texte */
+    }
+
+    /* Skills Section */
+    .skill-list {
+        grid-template-columns: 1fr; /* Une seule colonne pour les compétences */
+    }
+    .skill-item {
+        padding: 15px; /* Réduction des paddings */
+    }
+    .progress-bar {
+        height: 8px; /* Réduction de la hauteur des barres de progression */
+    }
+
+    /* Projects Section */
+    .project-grid {
+        grid-template-columns: 1fr; /* Une seule colonne pour les projets */
+    }
+    .project-card img {
+        height: 150px; /* Réduction de la hauteur des images */
+    }
+    .project-card h3 {
+        font-size: 1.2rem; /* Réduction de la taille du titre */
+    }
+
+    /* Contact Section */
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem; /* Réduction de la taille du texte des champs */
+    }
+    .btn {
+        font-size: 1rem; /* Réduction de la taille du bouton */
+        padding: 10px 15px;
+    }
+}
