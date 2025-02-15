@@ -385,6 +385,7 @@ body {
 
 /* Styles pour petits écrans */
 /* Styles pour petits écrans */
+/* Styles pour petits écrans */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -432,42 +433,42 @@ body {
 
     /* Ajustements spécifiques pour les boutons fléchés */
     .arrow-buttons {
-        position: fixed; /* Positionnement fixe */
-        bottom: 20px; /* Placer en bas de l'écran */
+        position: fixed;
+        bottom: 20px;
         left: 0;
         right: 0;
-        display: flex; /* Afficher les boutons côte à côte */
-        justify-content: space-between; /* Répartir les boutons horizontalement */
-        padding: 0 10px; /* Ajouter un espace latéral */
-        z-index: 1000; /* Assurer qu'ils restent visibles */
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        z-index: 1000;
     }
 
     .arrow-container {
-        flex-direction: column; /* Aligner la flèche au-dessus du texte */
-        gap: 5px; /* Réduire l'espace entre la flèche et le texte */
-        width: 45%; /* Chaque bouton occupe 45% de la largeur */
-        max-width: 120px; /* Limiter la largeur maximale */
+        flex-direction: column;
+        gap: 5px;
+        width: 45%;
+        max-width: 120px;
         height: auto;
         padding: 10px;
-        border-radius: 10px; /* Arrondir les coins */
-        background-color: rgba(0, 0, 0, 0.6); /* Fond sombre avec transparence */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ajouter une ombre subtile */
-        text-align: center; /* Centrer le texte */
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
     }
 
     .left-arrow, .right-arrow {
-        left: unset; /* Supprimer le positionnement absolu */
+        left: unset;
         right: unset;
     }
 
     .label {
-        font-size: 0.8rem; /* Réduire la taille du texte */
-        font-weight: 600; /* Garder le texte lisible */
-        white-space: nowrap; /* Empêcher le texte de se répartir sur plusieurs lignes */
+        font-size: 0.8rem;
+        font-weight: 600;
+        white-space: nowrap;
     }
 
     .arrow-icon {
-        width: 18px; /* Réduire la taille de la flèche */
+        width: 18px;
         height: 18px;
     }
 }
