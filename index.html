@@ -8,12 +8,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Boutons fléchés -->
+    <div class="arrow-buttons">
+        <!-- Flèche gauche (vers la page Projets) -->
+        <div class="arrow-container left-arrow" onclick="navigate('projets.html')">
+            <svg class="arrow-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+            <span class="label">Projets</span>
+            <div class="loading-bar"></div>
+        </div>
+        <!-- Flèche droite (vers la page Compétences) -->
+        <div class="arrow-container right-arrow" onclick="navigate('competences.html')">
+            <svg class="arrow-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+            <span class="label">Compétences</span>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
     <!-- Header Section -->
     <header class="header">
         <div class="container">
             <h1 class="name">Hachim Mohammed</h1>
-            <p class="tagline">Etudiant en BUT informatique</p>
-            <p class="tagline">Premiere années</p>
+            <p class="tagline">Étudiant en BUT Informatique</p>
+            <p class="tagline">Première année</p>
         </div>
     </header>
 
@@ -24,11 +44,12 @@
             <div class="about-content">
                 <img src="Moi.jpeg" alt="Hachim Mohammed" class="profile-pic">
                 <div class="text">
-                    <p>Bonjour, je suis Hachim Mohammed, je 
-                        suis un etudiant  et bla bla bal bla bla bla bla bla bla nla b
-                        bla bla bla 
+                    <p>
+                        Bonjour, je suis Hachim Mohammed et je suis le meilleur dans mon domaine -_-.
                     </p>
-                    <p>(SOON) 
+                    <p>
+                        Je travaille principalement avec des technologies telles que HTML, CSS.
+                        Mon objectif est de créer le plus beau site .
                     </p>
                 </div>
             </div>
@@ -79,7 +100,7 @@
                 <div class="skill-item">
                     <h3>JavaScript</h3>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 10%;"></div>
+                        <div class="progress" style="width: 75%;"></div>
                     </div>
                 </div>
                 <div class="skill-item">
@@ -105,18 +126,18 @@
             <div class="project-grid">
                 <div class="project-card">
                     <img src="project1.jpg" alt="Projet 1">
-                    <h3>Site e-commerce</h3>
-                    <p>Un site de commerce électronique complet avec panier, paiement et gestion des produits.</p>
+                    <h3>Projet 1</h3>
+                    <p>A remplir</p>
                 </div>
                 <div class="project-card">
                     <img src="project2.jpg" alt="Projet 2">
-                    <h3>Application mobile</h3>
-                    <p>Une application mobile pour suivre les dépenses personnelles en temps réel.</p>
+                    <h3>Projet 2</h3>
+                    <p>A remplir</p>
                 </div>
                 <div class="project-card">
                     <img src="project3.jpg" alt="Projet 3">
-                    <h3>Tableau de bord administratif</h3>
-                    <p>Un tableau de bord interactif pour gérer les données des utilisateurs et des ventes.</p>
+                    <h3>Projet 3</h3>
+                    <p>A remplir</p>
                 </div>
             </div>
         </div>
@@ -133,15 +154,14 @@
     <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 Hachim Mohammed. Tous droits réservés.</p>
             <ul class="social-links">
                 <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
                 <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
-                <li><a href="mailto:your.email@example.com">Email</a></li>
+                <li><a href="mailto:mohahac112@gmail.com">Email</a></li>
             </ul>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    
 </body>
 </html>
