@@ -438,7 +438,7 @@ body {
         right: 0;
         display: flex; /* Afficher les boutons côte à côte */
         justify-content: space-between; /* Répartir les boutons horizontalement */
-        padding: 0 20px; /* Ajouter un espace latéral */
+        padding: 0 10px; /* Ajouter un espace latéral */
         z-index: 1000; /* Assurer qu'ils restent visibles */
     }
 
@@ -446,6 +446,7 @@ body {
         flex-direction: column; /* Aligner la flèche au-dessus du texte */
         gap: 5px; /* Réduire l'espace entre la flèche et le texte */
         width: 45%; /* Chaque bouton occupe 45% de la largeur */
+        max-width: 120px; /* Limiter la largeur maximale */
         height: auto;
         padding: 10px;
         border-radius: 10px; /* Arrondir les coins */
@@ -462,6 +463,7 @@ body {
     .label {
         font-size: 0.8rem; /* Réduire la taille du texte */
         font-weight: 600; /* Garder le texte lisible */
+        white-space: nowrap; /* Empêcher le texte de se répartir sur plusieurs lignes */
     }
 
     .arrow-icon {
