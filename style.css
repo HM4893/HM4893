@@ -290,7 +290,7 @@ body {
 /* Placeholder (texte grisé par défaut) */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #aaa; /* Couleur du texte placeholder (gris clair) */
+    color: #181616; /* Couleur du texte placeholder (gris clair) */
     font-size: 1rem;
     opacity: 0.8; /* Opacité légèrement réduite */
 }
@@ -298,7 +298,7 @@ body {
 /* Champ en focus */
 .contact-form input:focus,
 .contact-form textarea:focus {
-    background: rgba(255, 255, 255, 0.2); /* Fond plus clair au focus */
+    background: rgba(255, 255, 255, 0.475); /* Fond plus clair au focus */
     color: #000; /* Texte noir au focus */
     outline: none; /* Supprime le contour bleu par défaut */
 }
