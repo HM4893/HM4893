@@ -1,8 +1,8 @@
 /* Variables */
 :root {
-    --primary-color: #6a1b9a; /* Violet foncé */
-    --secondary-color: #121212; /* Noir */
-    --accent-color: #d500f9; /* Violet fluo */
+    --primary-color: #7ce2db; /* Cyan fluo */
+    --secondary-color:  black; /* Noir */
+    --accent-color: #87ebec; /* Cyan fluo plus clair */
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -27,6 +27,81 @@ body {
     padding: 0 20px;
 }
 
+/* Boutons fléchés */
+.arrow-buttons {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1000;
+}
+
+.arrow-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 10px; /* Espace entre la flèche et le texte */
+}
+
+.arrow-container:hover {
+    transform: scale(1.1);
+}
+
+.left-arrow {
+    left: 30px;
+    flex-direction: row-reverse; /* Texte avant la flèche */
+}
+
+.right-arrow {
+    right: 30px;
+    flex-direction: row; /* Texte après la flèche */
+}
+
+/* Icône de flèche */
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: transform 0.3s ease;
+}
+
+.arrow-container:hover .arrow-icon {
+    transform: translateX(-5px); /* Animation légère de déplacement */
+}
+
+/* Label (texte Projets / Compétences) */
+.label {
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+    opacity: 0.8;
+}
+
+.arrow-container:hover .label {
+    opacity: 1; /* Augmente l'opacité au survol */
+}
+
+/* Barre de chargement */
+.loading-bar {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    opacity: 0;
+    transition: width 1s ease, opacity 0.3s ease;
+}
+
+.arrow-container:hover .loading-bar {
+    width: 100%;
+    opacity: 1;
+}
+
 /* Header */
 .header {
     text-align: center;
@@ -48,13 +123,7 @@ body {
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
-/* About Section */
-.about {
-    padding: 50px 0;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-}
-
+/* Sections */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -73,6 +142,13 @@ body {
     margin: 10px auto 0;
 }
 
+/* About Section */
+.about {
+    padding: 50px 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
 .about-content {
     display: flex;
     align-items: center;
@@ -80,10 +156,19 @@ body {
     gap: 30px;
 }
 
+/* Photo de profil (rectangle arrondi) */
 .profile-pic {
-    width: 300px;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
+    width: 200px; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+    border-radius: 10px; /* Coins légèrement arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile pour un effet 3D */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+/* Effet au survol de l'image */
+.profile-pic:hover {
+    transform: scale(1.05); /* Légère augmentation de taille */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
 }
 
 .text p {
@@ -115,12 +200,6 @@ body {
 .skill-item:hover {
     transform: scale(1.05);
     background: rgba(255, 255, 255, 0.2);
-}
-
-.skill-item h3 {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-bottom: 10px;
 }
 
 .progress-bar {
@@ -187,12 +266,14 @@ body {
 }
 
 /* Contact Section */
+/* Contact Section */
 .contact {
     padding: 50px 0;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
 }
 
+/* Formulaire de contact */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -201,16 +282,35 @@ body {
     border: none;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: #fff; /* Texte blanc par défaut */
     font-size: 1rem;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease; /* Transition fluide */
 }
 
+/* Placeholder (texte grisé par défaut) */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa; /* Couleur du texte placeholder (gris clair) */
+    font-size: 1rem;
+    opacity: 0.8; /* Opacité légèrement réduite */
+}
+
+/* Champ en focus */
 .contact-form input:focus,
 .contact-form textarea:focus {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2); /* Fond plus clair au focus */
+    color: #000; /* Texte noir au focus */
+    outline: none; /* Supprime le contour bleu par défaut */
 }
 
+/* Placeholder en focus */
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+    color: #000; /* Couleur du texte placeholder en noir */
+    opacity: 1; /* Opacité maximale */
+}
+
+/* Bouton Envoyer */
 .contact-form .btn {
     background: var(--accent-color);
     color: black;
@@ -283,66 +383,62 @@ body {
     }
 }
 
-/* Styles pour les petits écrans */
+/* Styles pour petits écrans */
 @media (max-width: 768px) {
-    /* Réduction de la taille du texte général */
     body {
         font-size: 14px;
     }
 
-    /* Header */
     .header {
         padding: 30px 0;
     }
+
     .name {
         font-size: 2rem;
     }
+
     .tagline {
         font-size: 1rem;
     }
 
-    /* About Section */
     .about-content {
-        flex-direction: column; /* Passage à une disposition verticale */
+        flex-direction: column;
         text-align: center;
     }
+
     .profile-pic {
-        width: 150px; /* Réduction de la taille de l'image de profil */
-        margin: 0 auto 20px; /* Centrer l'image */
+        width: 150px;
+        margin: 0 auto 20px;
     }
+
     .text p {
-        font-size: 1rem; /* Réduction de la taille du texte */
+        font-size: 1rem;
     }
 
-    /* Skills Section */
     .skill-list {
-        grid-template-columns: 1fr; /* Une seule colonne pour les compétences */
-    }
-    .skill-item {
-        padding: 15px; /* Réduction des paddings */
-    }
-    .progress-bar {
-        height: 8px; /* Réduction de la hauteur des barres de progression */
+        grid-template-columns: 1fr;
     }
 
-    /* Projects Section */
     .project-grid {
-        grid-template-columns: 1fr; /* Une seule colonne pour les projets */
-    }
-    .project-card img {
-        height: 150px; /* Réduction de la hauteur des images */
-    }
-    .project-card h3 {
-        font-size: 1.2rem; /* Réduction de la taille du titre */
+        grid-template-columns: 1fr;
     }
 
-    /* Contact Section */
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 1rem; /* Réduction de la taille du texte des champs */
+    .project-card img {
+        height: 150px;
     }
-    .btn {
-        font-size: 1rem; /* Réduction de la taille du bouton */
-        padding: 10px 15px;
+
+    /* Ajustements pour les boutons fléchés */
+    .arrow-container {
+        flex-direction: column; /* Mettre la flèche au-dessus du texte */
+        gap: 5px; /* Réduire l'espace entre la flèche et le texte */
+    }
+
+    .left-arrow, .right-arrow {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .label {
+        font-size: 0.8rem; /* Réduire la taille du texte */
     }
 }
